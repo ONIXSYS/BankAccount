@@ -110,7 +110,8 @@ public class BankAccountServiceTest {
         var expectedPrintResult = """
                 Transaction{operation='withdraw', date='2022-02-01', amount=200.00}
                 Transaction{operation='withdraw', date='2022-02-01', amount=100.00}
-                Transaction{operation='deposit', date='2022-02-05', amount=50.00}""";
+                Transaction{operation='deposit', date='2022-02-05', amount=50.00}
+                Balance{balance=450.00}""";
 
         //When
         var printResult = account.printStatement();

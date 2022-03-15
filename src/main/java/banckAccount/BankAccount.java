@@ -56,6 +56,13 @@ public class BankAccount implements BankAccountApi {
 
     @Override
     public String printStatement() {
-        return statement.printStatement();
+        return statement.printStatement()
+                .concat(getBalancePrint());
+    }
+
+    private String getBalancePrint() {
+        return "\nBalance{balance="
+                + balance.setScale(2)
+                + "}";
     }
 }
