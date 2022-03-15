@@ -37,7 +37,7 @@ public class Statement {
     }
 
     public List<Transaction> getTransactions() {
-        return transactions;
+        return List.copyOf(transactions);
     }
 
     @Override
